@@ -1,0 +1,23 @@
+.easy-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(204, 204, 204, 0.7);
+    z-index: 100;
+    display: none;
+}
+
+.easy-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.easy-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}

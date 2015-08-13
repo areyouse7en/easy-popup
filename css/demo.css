@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.easy-content {
+	width: 200px;
+	height: 150px;
+	background: #fff;
+	margin-left: -100px;
+	margin-top: -75px;
+}
