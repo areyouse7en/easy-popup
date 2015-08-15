@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Easy-popup-Seven_Tao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable=no ,minimal-ui">
+    <meta name="description" content="简单的弹窗插件-Seven_Tao">
+    <meta name="keywords" content="简单的弹窗插件-Seven_Tao">
+    <script>
+    // 百度统计
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?4ece74c2d9e1a3e0a705eb36e14998ee";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <link rel="stylesheet" href="libs/prism/prism.css">
+    <link rel="stylesheet" href="css/easy-popup.css">
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+
+<body>
+    <pre>
+        <code class="language-javascript">
+
+		 * 简单的弹窗插件
+		 * version: 1.0.0 (Wed, 14 August 2015)
+		 * @author Seven Tao
+		 * @requires jQuery
+		 *
+		 * @param drag 可拖拽 default:true
+		 * @param closeBtn 有关闭按钮 default:true
+		 * @param clickOnOverlayer 点击遮罩关闭弹窗 default:true
+		 * @param contents html代码 default:'&#x3c;div class="easy-contents"&#x3e;&#x3c;/div&#x3e;'
+		 * @param afterClose 回调函数 default:null
+		 * @usage
+		 * 引用easy-popup.css 和 easy-popup.js(在jquery之后)
+		 * 根据设计，重写.easy-contents和.easy-close
+
+		$('.showbtn').click(function() {
+	        $.easypop({
+	            contents: '&#x3c;div class="easy-contents"&#x3e;' +
+	                '&#x3c;h1&#x3e;Easy-popup&#x3c;/h1&#x3e;' +
+	                '&#x3c;p&#x3e; 让设计师随意设计，我只需要把它弹出来就行了~&#x3c;/p&#x3e;'+
+	                '&#x3c;/div&#x3e;',
+                afterClose:function(){
+                	$('.showbtn').html('So Easy!');
+                }
+	        });
+		});
+        </code>
+    	<button class="showbtn">showPopup</button>
+    </pre>
+    <!-- 脚本 -->
+    <script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/easy-popup.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.showbtn').click(function() {
+            $.easypop({
+                contents: '<div class="easy-contents">' +
+                    '<h1>Easy-popup</h1>' +
+                    '<br><p>让设计师随意设计，我只需要把它弹出来就行了~</p>' +
+                    '</div>',
+                afterClose: function() {
+                    $('.showbtn').html('So Easy!');
+                }
+            });
+        });
+    });
+    </script>
+    <!-- 以下脚本无关紧要 -->
+    <script src="libs/prism/prism.js"></script>
+</body>
+
+</html>
