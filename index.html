@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Easy-popup-Seven_Tao</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable=no ,minimal-ui">
@@ -17,68 +17,43 @@
         s.parentNode.insertBefore(hm, s);
     })();
     </script>
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <link rel="stylesheet" href="libs/prism/prism.css">
     <link rel="stylesheet" href="css/easy-popup.css">
     <link rel="stylesheet" href="css/demo.css">
+</head>
 
-    <title>Easy-popup</title>
-  </head>
+<body>
+    <pre>
+        <code class="language-javascript">
 
-  <body>
+     * 简单的弹窗插件
+     * version: 1.0.0 (Wed, 14 August 2015)
+     * @author Seven Tao
+     * @requires jQuery
+     *
+     * @param drag 可拖拽 default:true
+     * @param closeBtn 有关闭按钮 default:true
+     * @param clickOnOverlayer 点击遮罩关闭弹窗 default:true
+     * @param contents html代码 default:'&#x3c;div class="easy-contents"&#x3e;&#x3c;/div&#x3e;'
+     * @param afterClose 回调函数 default:null
+     * @usage
+     * 引用easy-popup.css 和 easy-popup.js(在jquery之后)
+     * 根据设计，重写.easy-contents和.easy-close
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/areyouse7en/easy-popup">View on GitHub</a>
-
-          <h1 id="project_title">Easy-popup</h1>
-          <h2 id="project_tagline">简单的弹窗插件</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/areyouse7en/easy-popup/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/areyouse7en/easy-popup/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-         <pre>
-            <code class="language-javascript">
-
-         * 简单的弹窗插件
-         * version: 1.0.0 (Wed, 14 August 2015)
-         * @author Seven Tao
-         * @requires jQuery
-         *
-         * @param drag 可拖拽 default:true
-         * @param closeBtn 有关闭按钮 default:true
-         * @param clickOnOverlayer 点击遮罩关闭弹窗 default:true
-         * @param contents html代码 default:'&#x3c;div class="easy-contents"&#x3e;&#x3c;/div&#x3e;'
-         * @param afterClose 回调函数 default:null
-         * @usage
-         * 引用easy-popup.css 和 easy-popup.js(在jquery之后)
-         * 根据设计，重写.easy-contents和.easy-close
-
-        $('.showbtn').click(function() {
-              $.easypop({
-                  contents: '&#x3c;div class="easy-contents"&#x3e;' +
-                      '&#x3c;h1&#x3e;Easy-popup&#x3c;/h1&#x3e;' +
-                      '&#x3c;p&#x3e; 让设计师随意设计，我只需要把它弹出来就行了~&#x3c;/p&#x3e;'+
-                      '&#x3c;/div&#x3e;',
-                    afterClose:function(){
-                      $('.showbtn').html('So Easy!');
-                    }
-              });
-        });
-            </code>
-          <button class="showbtn">showPopup</button>
-        </pre>
-      </section>
-    </div>
-
+    $('.showbtn').click(function() {
+          $.easypop({
+              contents: '&#x3c;div class="easy-contents"&#x3e;' +
+                  '&#x3c;h1&#x3e;Easy-popup&#x3c;/h1&#x3e;' +
+                  '&#x3c;p&#x3e; 让设计师随意设计，我只需要把它弹出来就行了~&#x3c;/p&#x3e;'+
+                  '&#x3c;/div&#x3e;',
+                afterClose:function(){
+                  $('.showbtn').html('So Easy!');
+                }
+          });
+    });
+        </code>
+      <button class="showbtn">showPopup</button>
+    </pre>
     <!-- 脚本 -->
     <script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/easy-popup.min.js"></script>
@@ -99,16 +74,6 @@
     </script>
     <!-- 以下脚本无关紧要 -->
     <script src="libs/prism/prism.js"></script>
+</body>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Easy-popup maintained by <a href="https://github.com/areyouse7en">areyouse7en</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
 </html>
